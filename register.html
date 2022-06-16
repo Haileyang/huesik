@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴식 -  회원가입</title>
+    <!-- js lib -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="/huesik/public/css/app.css">
+    <script src="/huesik/public/js/main.js"></script>
+
+</head>
+<body>
+    <nav class="bottom-nav">
+        <ul class="gnb-lists">
+            <li class="gnb-list on">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-home-active.png" alt="HOME"></figure>
+                    <small class="gnb-title">HOME</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-info.png" alt="소개"></figure>
+                    <small class="gnb-title">소개</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-calendar.png" alt="서비스"></figure>
+                    <small class="gnb-title">서비스</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-chat.png" alt="문의"></figure>
+                    <small class="gnb-title">문의</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-user.png" alt="내정보"></figure>
+                    <small class="gnb-title">내정보</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="login">
+        <div class="inr login">
+            <div class="login-txt">
+                <figure class="logo-full">
+                    <img src="/huesik/public/image/logo-full.png" alt="휴식타워 로고">
+                </figure>
+                <h1>휴식타워 광운대점 입주자를 위한<br> 네트워크 서비스 입니다.</h1>
+            </div>
+            <ul class="tab-lists">
+                <li class="tab-list">
+                    <a href="/huesik/login.html">로그인</a>
+                </li>
+                <li class="tab-list on">
+                    <a href="/huesik/register.html">회원가입</a>
+                </li>
+            </ul>
+            <!-- STEP 01 -->
+            <div class="register-agreement">
+                <form action="">
+                    <ul class="register-summary-lists">
+                        <li class="register-summary-list">
+                            <figure><img src="/huesik/public/image/icon-register1.png" alt="회원가입 신청"></figure>
+                            <span class="register-summary-txt">
+                                <small>STEP 1</small>
+                                <strong>회원가입 신청</strong>
+                            </span>
+                        </li>
+                        <li class="register-summary-list">
+                            <figure><img src="/huesik/public/image/icon-register2.png" alt="실제 거주여부 확인"></figure>
+                            <span class="register-summary-txt">
+                                <small>STEP 2</small>
+                                <strong>실제 거주여부 확인</strong>
+                            </span>
+                        </li>
+                        <li class="register-summary-list">
+                            <figure><img src="/huesik/public/image/icon-register3.png" alt="가입승인/번호안내"></figure>
+                            <span class="register-summary-txt">
+                                <small>STEP 3</small>
+                                <strong>가입승인/번호안내</strong>
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="agreement-wrap">
+                        <strong>서비스 이용 약관에 동의해주세요</strong>
+                        <div class="agreement">
+                            <div class="check-all"> 
+                                <p class="custom-checkbox">
+                                    <input type="checkbox" name="agree-post" id="check" value='selectall'
+                                    onclick='selectAll(this)' required="">
+                                    <label for="check">
+                                        <span class="label-txt">
+                                            <small> 전체동의</small>
+                                        </span>
+                                    </label>
+                                </p>
+                            </div>
+                            <ul class="check-lists">
+                                <li class="check-list">
+                                    <p class="custom-checkbox">
+                                        <input type="checkbox" name="agree-post" id="check01" required="">
+                                        <label for="check01">
+                                            <span class="label-txt">
+                                                <small>이용약관 (필수)</small>
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#modal-agree1">보기</button>
+                                            </span>
+                                        </label>
+                                    </p>
+                                </li>
+                                <li class="check-list">
+                                    <p class="custom-checkbox">
+                                        <input type="checkbox" name="agree-post" id="check02" required="">
+                                        <label for="check02">
+                                            <span class="label-txt">
+                                                <small> 개인정보 처리 방침 (필수)</small>
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#modal-agree2">보기</button>
+                                            </span>
+                                        </label>
+                                    </p>
+                                </li>
+                                <li class="check-list">
+                                    <p class="custom-checkbox">
+                                        <input type="checkbox" name="agree-post" id="check03" required="">
+                                        <label for="check03">
+                                            <span class="label-txt">
+                                                <small>  마케팅 수신 동의 (선택)</small>
+                                                <button type="button" class="btn" data-toggle="modal" data-target="#modal-agree3">보기</button>
+                                            </span>
+                                        </label>
+                                    </p>
+                                
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-wrap">
+                        <small>위 약관에 동의합니다</small>
+                        <button class="btn disable">다음</button>
+                    </div>
+                </form>
+            </div>
+            <!-- STEP 02 -->
+            <form action="" class="form-login">
+                <div class="input-wrap on">
+                    <input type="text" placeholder="이름">
+                    <small class="input-status error">이름을 입력해주세요</small>
+                </div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="아이디 (이메일)">
+                    <small class="input-status error">아이디(이메일)를 입력해주세요</small>
+                    <span class="input-txt">중복확인</span>
+                </div>
+                <div class="input-wrap">
+                    <input type="text" value="asd1234253!">
+                    <span class="input-icon password-hidden" hidden><img src="/huesik/public/image/icon-password-hidden.png" alt="비밀번호 숨김"></span>
+                    <span class="input-icon password-visible"><img src="/huesik/public/image/icon-password-visible.png" alt="비밀번호 보이기"></span>
+                </div>
+                <div class="input-wrap">
+                    <input type="password" value="비밀번호">
+                    <span class="input-icon password-hidden"><img src="/huesik/public/image/icon-password-hidden.png" alt="비밀번호 숨김"></span>
+                    <span class="input-icon password-visible hidden"><img src="/huesik/public/image/icon-password-visible.png" alt="비밀번호 보이기"></span>
+                    <small class="input-status visible">8~12자 영문, 숫자, 특수문자 조합</small>
+                </div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="휴대폰 번호">
+                    <small class="input-status error">휴대폰 번호를 입력해주세요</small>
+                    <span class="input-txt">인증번호</span>
+                </div>
+                <div class="input-wrap">
+                    <input type="text" placeholder="인증번호">
+                    <small class="input-status error">인증번호를 입력해주세요</small>
+                    <span class="input-txt">다시보내기</span>
+                </div>
+                <div class="register-extra-info">
+                    <small>입주 세대 입력</small>
+                    <div class="input-wrap">
+                        <select name="" id="">
+                            <option value="">2층</option>
+                        </select>
+                    </div>
+                    <div class="input-wrap">
+                        <select name="" id="">
+                            <option value="">201호</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#modal-register">회원가입</button>
+                </div>
+
+            </form>
+            <!-- MODAL -->
+            <div class="modal fade" id="modal-agree1" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">이용약관</h4>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>제1조(목적)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제2조 (약관의 효력)</dt>
+                            <dd>
+                                1.본 약관은 '갑'에 회원 가입 시 회원들에게 통지함으로써 효력을 발생합니다.<br>
+                        
+                                2.'갑'은 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는 통지함으로써 효력을 발생합니다.<br>
+                                
+                                3.약관의 변경사항 및 내용은 '갑'의 홈페이지에 게시하는 방법으로 공시합니다.<br>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>제3조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제4조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                    </div>
+                </div>
+                
+                </div>
+            </div> 
+            <div class="modal fade" id="modal-agree2" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">개인정보 처리 방침</h4>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>제1조(목적)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제2조 (약관의 효력)</dt>
+                            <dd>
+                                1.본 약관은 '갑'에 회원 가입 시 회원들에게 통지함으로써 효력을 발생합니다.<br>
+                        
+                                2.'갑'은 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는 통지함으로써 효력을 발생합니다.<br>
+                                
+                                3.약관의 변경사항 및 내용은 '갑'의 홈페이지에 게시하는 방법으로 공시합니다.<br>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>제3조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제4조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                    </div>
+                </div>
+                
+                </div>
+            </div> 
+            <div class="modal fade" id="modal-agree3" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">마케팅 수신 동의 </h4>
+                    </div>
+                    <div class="modal-body">
+                        <dl>
+                            <dt>제1조(목적)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제2조 (약관의 효력)</dt>
+                            <dd>
+                                1.본 약관은 '갑'에 회원 가입 시 회원들에게 통지함으로써 효력을 발생합니다.<br>
+                        
+                                2.'갑'은 이 약관의 내용을 변경할 수 있으며, 변경된 약관은 제1항과 같은 방법으로 공지 또는 통지함으로써 효력을 발생합니다.<br>
+                                
+                                3.약관의 변경사항 및 내용은 '갑'의 홈페이지에 게시하는 방법으로 공시합니다.<br>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>제3조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>제4조 (약관 이외의 준칙)</dt>
+                            <dd>본 회원약관은 AcAT(이하 '갑'라 한다)이 운영하는 인터넷관련 서비스(이하 '서비스'라 한다)를 이용함에 있어 관리자와 이용자(이하 '회원'라 한다)의 권리, 의무 및 책임사항을 규정함을 목적으로 한다.</dd>
+                        </dl>
+                    </div>
+                </div>
+                
+                </div>
+            </div>    
+            <div class="modal fade" id="modal-register" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">회원 가입 신청 완료</h4>
+                        </div>
+                        <div class="modal-body">
+                            <dl>
+                                <dt>회원 가입이 정상적으로 처리되었습니다.</dt>
+                                <dd>
+                                    실제 거주자인지 확인하여 회원가입 여부를 
+                                    핸드폰 문자로 신속하게 안내해 드리겠습니다 ~~
+                                    
+                                    서비스 이용관련이나 입주에 관련된 문의사항이 
+                                    있으시면 편하게 연락주세요 : )
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="modal-footer">
+                            <div class="btn-wrap">
+                                <button type="button" class="btn" data-toggle="modal" data-target="#modal-register">회원가입</button>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴식 - 비밀번호 재설정 페이지</title>
+     <!-- js lib -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- custom -->
+     <link rel="stylesheet" href="/huesik/public/css/app.css">
+     <script src="/huesik/public/js/main.js"></script>
+ 
+</head>
+<body>
+    <header>
+        <div class="inr">
+            <span class="prev">
+                <a href="/huesik/findPw.html">
+                    <img src="/huesik/public/image/icon-prev.png" alt="뒤로가기">
+                </a>
+            </span>
+            <h1>비밀번호 재설정</h1>
+        </div>
+    </header>
+    <nav class="bottom-nav">
+        <ul class="gnb-lists">
+            <li class="gnb-list on">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-home-active.png" alt="HOME"></figure>
+                    <small class="gnb-title">HOME</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-info.png" alt="소개"></figure>
+                    <small class="gnb-title">소개</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-calendar.png" alt="서비스"></figure>
+                    <small class="gnb-title">서비스</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-chat.png" alt="문의"></figure>
+                    <small class="gnb-title">문의</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-user.png" alt="내정보"></figure>
+                    <small class="gnb-title">내정보</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="sub" class="find-account">
+        <div class="inr">
+            <strong>본인인증 완료</strong>
+            <form action="" class="form-login">
+                <div class="input-wrap">
+                    <input type="text" value="asd1234253!">
+                    <span class="input-icon password-hidden" hidden><img src="/huesik/public/image/icon-password-hidden.png" alt="비밀번호 숨김"></span>
+                    <span class="input-icon password-visible"><img src="/huesik/public/image/icon-password-visible.png" alt="비밀번호 보이기"></span>
+                </div>
+                <div class="input-wrap">
+                    <input type="password" value="비밀번호">
+                    <span class="input-icon password-hidden"><img src="/huesik/public/image/icon-password-hidden.png" alt="비밀번호 숨김"></span>
+                    <span class="input-icon password-visible hidden"><img src="/huesik/public/image/icon-password-visible.png" alt="비밀번호 보이기"></span>
+                    <small class="input-status visible">8~12자 영문, 숫자, 특수문자 조합</small>
+                </div>
+                <div class="btn-wrap mg-t">
+                    <span class="btn"><a href="/huesik/login.html">비밀번호 재설정</a></span>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>

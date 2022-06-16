@@ -1,0 +1,227 @@
+// LOGIN
+main{
+    &#login{
+        padding: 64px 0 100px;
+    }
+}
+.login-txt{
+    margin-bottom: 60px;
+    img{
+        max-height: 45px;
+    }
+    h1{
+        margin-top: 15px;
+        font-size: 14px;
+        color: $color-grey;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+}
+.tab-lists{
+    border-bottom: 1px solid $color-border;
+    display: flex;
+    margin-bottom: 20px;
+    .tab-list {
+        padding: 0 15px 10px 15px;
+        font-size: 16px;
+        color: $color-disable;
+        border-bottom: 1px solid transparent;
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        &.on{
+            a{
+                color: $color-primary;
+                font-weight: bold;
+            }
+            border-color: $color-primary;
+        }
+    }
+}
+.find-trigger-wrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 40px;
+    .find-trigger{
+        margin-top: 8px;
+        a{
+            font-size: 14px;
+            color: $color-placeholder;
+            text-decoration: underline;
+        }
+       
+    }
+}
+.inquiry-trigger-wrap{
+    margin-top: 30px;
+    text-align: center;
+    .inquiry-trigger{
+        font-size: 12px;
+        color: $color-placeholder;
+        text-decoration: underline;
+        background: none;
+        border: none;
+    }
+}
+
+// REGISTER
+.register-extra-info{
+    margin-top: 25px;
+    margin-bottom: 30px;
+    small{
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 10px;
+        display: block;
+        font-weight: 500;
+    }
+}
+.register-agreement{
+    .register-summary-lists{
+        background-color: #F7F7F7;
+        border-radius: 4px;
+        display: flex;
+        padding: 18px 0;
+        li{
+            flex: 1;
+            text-align: center;
+            img{
+                width: 24px;
+                height: 24px;
+                margin: 0 auto 10px auto;
+            }
+            small{
+                font-size: 10px;
+                color: $color-primary;
+                font-weight: 700;
+            }
+            strong{
+                font-size: 11px;
+            }
+            img{
+                width: 24px;
+                height: 24px;
+                margin: 0 auto 10px auto;
+            }
+            small{
+                font-size: 10px;
+                color: $color-primary;
+                font-weight: 700;
+                display: block;
+                margin-bottom: 5px;
+            }
+            strong{
+                font-size: 12px;
+                display: block;
+                font-weight: 400;
+            }
+        }
+        
+        
+        
+    }
+    .agreement-wrap{
+        margin-top: 25px;
+        strong{
+            font-size: 14px;
+            color: #444;
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// FIND
+header{
+    .inr{
+        display: flex;
+        align-items: center;
+        height: 55px;
+    }
+    .prev{
+        margin-right: 10px;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+      
+    }
+}
+#sub{
+    padding: 30px 0 100px 0;
+}
+.find-account{
+    h2{
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 29px;
+        color: #444;
+        margin-bottom: 35px;
+    }
+    strong{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 20px;
+        display: block;
+    }
+    .find-lists{
+        li{
+            border-radius: 4px;
+            background-color: #f7f7f7;
+            position: relative;
+            padding: 13.5px 16px 13.5px 10px;
+            a{
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                line-height: 20px;
+                text-decoration: none;
+                color: $color-black;
+            }
+            figure{
+                margin-right: 5px;
+            }
+            img{
+                width: 28px;
+                height: 28px;
+            }
+            &::after{
+                content:"";
+                width: 12px;
+                height: 6px;
+                background: url('/huesik/public/image/icon-select-arrow.png') no-repeat center/ 12px 6px;
+                position: absolute;
+                right: 16px; top: 50%;
+                transform: translateY(-50%) rotate(-90deg);
+            }
+
+        }
+        li + li{
+            margin-top: 15px;
+        }
+    }
+    .customer-txt{
+        margin-top: 55px;
+        font-size: 12px;
+        color: #444;
+        dt{
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        dd{
+            font-weight: 700;
+            margin-top: 15px;
+        }
+    }
+    .findId-result{
+        margin-top: 20px;
+        color: $color-primary;
+        font-weight: 700;
+        text-decoration: underline;
+        display: block;
+    }
+}

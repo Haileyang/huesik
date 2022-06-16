@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴식 - 로그인 페이지</title>
+     <!-- js lib -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+     <!-- custom -->
+     <link rel="stylesheet" href="/huesik/public/css/app.css">
+     <script src="/huesik/public/js/main.js"></script>
+ 
+</head>
+<body>
+    <nav class="bottom-nav">
+        <ul class="gnb-lists">
+            <li class="gnb-list on">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-home-active.png" alt="HOME"></figure>
+                    <small class="gnb-title">HOME</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-info.png" alt="소개"></figure>
+                    <small class="gnb-title">소개</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-calendar.png" alt="서비스"></figure>
+                    <small class="gnb-title">서비스</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-chat.png" alt="문의"></figure>
+                    <small class="gnb-title">문의</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-user.png" alt="내정보"></figure>
+                    <small class="gnb-title">내정보</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="login">
+        <div class="inr login">
+            <div class="login-txt">
+                <figure class="logo-full">
+                    <img src="/huesik/public/image/logo-full.png" alt="휴식타워 로고">
+                </figure>
+                <h1>휴식타워 광운대점 입주자를 위한<br> 네트워크 서비스 입니다.</h1>
+            </div>
+            <ul class="tab-lists">
+                <li class="tab-list on">
+                    <a href="/huesik/login.html">로그인</a>
+                </li>
+                <li class="tab-list">
+                    <a href="/huesik/register.html">회원가입</a>
+                </li>
+            </ul>
+            <form action="" class="form-login">
+                <div class="input-wrap on">
+                    <input type="text" placeholder="아이디">
+                    <small class="input-status error">아이디를 입력해주세요</small>
+                </div>
+                <div class="input-wrap">
+                    <input type="password" placeholder="비밀번호">
+                </div>
+                <div class="find-trigger-wrap">
+                    <small class="find-trigger"><a href="/huesik/findAccount.html">아이디/비밀번호 찾기</a></small>
+                </div>
+                <div class="btn-wrap">
+                    <button class="btn">로그인</button>
+                    <span class="btn line">
+                        <a href="">게스트로 둘러보기</a>
+                    </span>
+                </div>
+            </form>
+            <div class="inquiry-trigger-wrap">
+                <button type="button" class="inquiry-trigger" data-toggle="modal" data-target="#modal-inquiry">문의하기</button>
+            </div>
+             <!-- MODAL -->
+        <div class="modal fade" id="modal-inquiry" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">관리자에게 문의하기</h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="customer-lists">
+                            <li class="customer-list">
+                                <figure><img src="/huesik/public/image/icon-call.png" alt="전화기"></figure>
+                                전화번호 : 02-123-123
+                            </li>
+                            <li class="customer-list">
+                                <figure><img src="/huesik/public/image/icon-email.png" alt="편지"></figure>
+                                이메일 : official@huesik.co.kr
+                            </li>
+                        </ul>
+                       <p class="customer-txt">서비스 이용관련이나 입주에 관련된 문의사항이 <br> 있으시면 편하게 연락주세요 : )</p>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        </div>
+       
+    </main>
+</body>
+</html>

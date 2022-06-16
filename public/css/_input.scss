@@ -1,0 +1,190 @@
+.input-wrap{
+    position: relative;
+    input[type=text],
+    input[type=password],
+    select{
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid $color-border;
+        padding: 15px 0;
+        font-size: 16px;
+        outline: none;
+        appearance: none;
+        &:focus{
+            border-color: $color-grey;
+        }
+    }
+    select{
+        background: url('/huesik/public/image/icon-select-arrow.png') no-repeat center right/ 12px 6px;
+    }
+    .input-status{
+        font-size: 12px;
+        margin-top: 4px;
+        display: none;
+        color: $color-grey;
+        &.error{
+            color: $color-error;
+        }
+    }
+    .input-txt{
+        position: absolute;
+        right: 0; top: 16px;
+        font-size: 14px;
+        color: $color-primary;
+        font-weight: bold;
+    }
+    .input-icon{
+        position: absolute;
+        right: 0; top: 14px;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &.on{
+        input[type=text],
+        input[type=password]{
+            border-color: $color-error;
+        }
+        .input-status{
+            display: block;
+        }
+        
+    }
+}
+.input-wrap + .input-wrap{
+    margin-top: 15px;
+}
+
+
+// AGREE CHECKBOX
+.custom-checkbox{
+    position: relative;
+    .label-txt{
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        small{
+            font-size: 14px;
+            font-weight: 400;
+            color: $color-disable;
+        }
+        .btn{
+            background-color: transparent;
+            border-radius: 0;
+            border: none; 
+            outline: none;
+            font-size: 14px;
+            color: $color-disable;
+            text-decoration: underline;
+            font-weight: 400;
+            box-shadow: none;
+        }
+    }
+    input[type="checkbox"] {width: 0;height: 0;
+        opacity: 0;
+        position: relative;left: 0; top: 0;
+        z-index: 10000;
+        cursor: pointer;
+    }
+    input[type="checkbox"] + label {display: inline-block;
+        position: absolute; left: 0;
+        cursor: pointer;
+        -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;
+        font-size: 15px;
+        width: 100%;
+    }
+    input[type="checkbox"]:checked + label:after{
+        content: "";
+        display: inline-block;
+        border-right: 1.5px solid $color-primary;
+        border-bottom: 1.5px solid $color-primary;
+        width: 7px;
+        height: 14px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+    input[type="checkbox"] + label:before {content: ' ';
+        display: inline-block;
+        width: 7px;
+        height: 14px;
+        border-right: 1.5px solid $color-disable;
+        border-bottom: 1.5px solid $color-disable;
+        line-height: 3px;font-size: 17px;text-align: center;
+        vertical-align: middle;
+        position: absolute;left: 0;top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+    }
+}
+.check-all{
+    padding: 0 20px;
+    height: 45px;
+    background-color: #f7f7f7;
+    display: flex; 
+    align-items: center;
+    &.on{
+        background-color: #F5F8FC;
+    }
+    .custom-checkbox{
+        width: 100%;
+        position: relative;
+        .label-txt{display: block;
+            padding-left: 35px;
+            small{
+                font-size: 14px;
+                color: $color-black;
+                font-weight: 500;
+            }
+        }
+        input[type="checkbox"] {width: 0;height: 0;
+            opacity: 0;
+            position: relative;left: 0; top: 0;
+            z-index: 10000;
+            cursor: pointer;
+        }
+        input[type="checkbox"] + label {display: inline-block;
+            position: absolute; left: 0;
+            cursor: pointer;
+            -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;
+            font-size: 14px;
+            width: 100%;
+        }
+        input[type="checkbox"]:checked + label:after{
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url('/huesik/public/image/icon-register3-active.png') no-repeat center/ contain;
+            border: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            color: $color-primary;
+        }
+        input[type="checkbox"] + label:before {content: ' ';
+            display: inline-block;
+            width: 20px;height: 20px;
+            font-size: 14px;text-align: center;
+            background: url('/huesik/public/image/icon-register3.png') no-repeat center/ contain;
+            vertical-align: middle;
+            position: absolute;left: 0;top: 50%;
+            transform: translateY(-50%);
+            border: none;
+        }
+        input[type="checkbox"]:checked + label .label-txt small{
+            color: $color-primary;
+        }
+    } 
+}
+.check-lists{
+    padding: 15px  0 10px 25px ;
+    margin-bottom: 40px;
+    li + li {
+        margin-top: 12px;
+    }
+}
