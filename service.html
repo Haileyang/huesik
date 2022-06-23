@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴식 - 편의 서비스 페이지</title>
+
+    <!-- js lib -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="/huesik/https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/huesik/https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- custom -->
+    <link rel="stylesheet" href="/huesik/public/css/app.css">
+    <script defer src="/huesik/public/js/main.js"></script>
+    <script src="/huesik/public/js/custom-swiper.js"></script>
+
+
+    <!-- rolling js -->
+    <script type="text/javascript" src="/huesik/public/lib/rolling/assets/js/jquery.js"></script>
+    <script defer type="text/javascript" src="/huesik/public/lib/rolling/assets/js/acmeticker.js"></script>
+    <link rel="stylesheet" href="/huesik/public/lib/rolling/assets/css/style.css">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="inr flex">
+            <figure class="logo"><img src="/huesik/public/image/logo-full.png" alt="휴식 로고"></figure>
+            <div class="header-right">
+                <div class="header-user">
+                    <figure><img src="/huesik/public/image/icon-header-user.png" alt="마이페이지"></figure>
+                    <span class="user-name">홍길동</span>
+                </div>
+                <div class="header-notification">
+                    <figure>
+                        <img class="default" src="/huesik/public/image/icon-header-notification-default.png" alt="알림">
+                        <img class="active" src="/huesik/public/image/icon-header-notification-active.png" alt="알림">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="bottom-nav">
+        <ul class="gnb-lists">
+            <li class="gnb-list">
+                <a href="/huesik/index.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-home.png" alt="HOME"></figure>
+                    <small class="gnb-title">HOME</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/about.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-info.png" alt="소개"></figure>
+                    <small class="gnb-title">소개</small>
+                </a>
+            </li>
+            <li class="gnb-list on">
+                <a href="/huesik/service.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-calendar-active.png" alt="서비스">
+                    </figure>
+                    <small class="gnb-title">서비스</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/inquiryForm.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-chat.png" alt="문의"></figure>
+                    <small class="gnb-title">문의</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/mypage.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-user.png" alt="내정보"></figure>
+                    <small class="gnb-title">내정보</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="sub" class="service">
+        <div class="inr">
+            <div class="service-content-wrap">
+                <h1 class="sub-content-tit">편의 서비스</h1>
+                <ul class="tab-lists tab">
+                    <li class="tab-list on">공용공간 대여</li>
+                    <li class="tab-list">예약 이력</li>
+                </ul>
+            </div>
+        </div>
+        <ul class="tab-contents">
+            <li class="tab-content on">
+                <ul class="share-area-lists pc-flex">
+                    <li class="share-area-list">
+                        <div class="share-area-inr">
+                            <figure><img src="/huesik/public/image/service-img01.jpg" alt="피트니스룸"></figure>
+                            <dl>
+                                <dt>
+                                    <small>1F 101호</small>
+                                    피트니스룸
+                                </dt>
+                                <dd>
+                                    <span class="btn">
+                                        <a href="/huesik/reservation.html">예약하기</a>
+                                    </span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="share-area-list">
+                        <div class="share-area-inr">
+                            <figure><img src="/huesik/public/image/service-img02.jpg" alt="커뮤니티룸"></figure>
+                            <dl>
+                                <dt>
+                                    <small>1F 101호</small>
+                                    커뮤니티룸
+                                </dt>
+                                <dd>
+                                    <span class="btn">
+                                        <a href="/huesik/reservation.html">예약하기</a>
+                                    </span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                    <li class="share-area-list">
+                        <div class="share-area-inr">
+                            <figure><img src="/huesik/public/image/service-img03.jpg" alt="메인 라운지"></figure>
+                            <dl>
+                                <dt>
+                                    <small>1F 101호</small>
+                                    메인 라운지
+                                </dt>
+                                <dd>
+                                    <span class="btn">
+                                        <a href="/huesik/reservation.html">예약하기</a>
+                                    </span>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            <li class="tab-content">
+                <div class="filter-wrap">
+                    <figure class="filter-icon"><img src="/huesik/public/image/icon-filter.png" alt="필터 아이콘"></figure>
+                    <ul class="filter-lists">
+                        <li class="filter-list on">이용완료제외</li>
+                        <li class="filter-list">최신순</li>
+                    </ul>
+                </div>
+                <ul class="reservation-lists pc-flex">
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status ongoing">이용중</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status complete">이용완료</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status not-complete">이용대기</div>
+                            <span class="cancel">예약취소</span>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status complete">이용완료</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status not-complete">이용대기</div>
+                            <span class="cancel">예약취소</span>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status complete">이용완료</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status not-complete">이용대기</div>
+                            <span class="cancel">예약취소</span>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status complete">이용완료</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status not-complete">이용대기</div>
+                            <span class="cancel">예약취소</span>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status complete">이용완료</div>
+                        </span>
+                    </li>
+                    <li class="reservation-list">
+                        <strong class="reservation-room">피트니스룸</strong>
+                        <span class="reservation-date">
+                            <span class="reservation-day">2022.06.10</span>
+                            <span class="reservation-time">10:00/11:00/12:00</span>
+                        </span>
+                        <span class="reservation-status">
+                            <div class="status not-complete">이용대기</div>
+                            <span class="cancel">예약취소</span>
+                        </span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="loading-wrap">
+            <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+                    stroke="var(--secondary)" stroke-width="2"></path>
+                <path
+                    d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+                    stroke="var(--secondary)" stroke-width="2"></path>
+                <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+                </path>
+                <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
+                <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </main>
+</body>

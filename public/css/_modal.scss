@@ -11,7 +11,7 @@
         left: 50%;
         max-width: 320px;
         transform: translate(-50%, -50%) !important;
-        
+        margin: 0;
     }
     .modal-content{
         padding-bottom: 20px;
@@ -38,10 +38,15 @@
         max-height: 260px;
         overflow-y: scroll;
         overflow-x: hidden;
+        font-size: 14px;
+        color: #444;
+        margin-bottom: 20px;
+        line-height: 1.5;
         p,dt,dd{
             font-size: 14px;
             color: #444;
             margin-bottom: 20px;
+            line-height: 1.5;
         }
         dt{
             margin-bottom: 10px;

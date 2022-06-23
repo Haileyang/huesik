@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>휴식 - 내 정보</title>
+
+    <!-- js lib -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Swiper  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- custom -->
+    <link rel="stylesheet" href="/huesik/public/css/app.css">
+    <script defer src="/huesik/public/js/main.js"></script>
+    <script defer src="/huesik/public/js/custom-swiper.js"></script>
+    <!-- rolling js -->
+    <script defer type="text/javascript" src="/huesik/public/lib/rolling/assets/js/acmeticker.js"></script>
+    <link rel="stylesheet" href="/huesik/public/lib/rolling/assets/css/style.css">
+    <!-- multi file -->
+    <script src="/huesik/public/lib/multiFile/jquery.MultiFile.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.1/jquery.form.min.js"></script>
+    <!-- datepicker -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="inr">
+            <span class="prev">
+                <a href="/huesik/index.html">
+                    <img src="/huesik/public/image/icon-prev.png" alt="뒤로가기">
+                </a>
+            </span>
+            <h1>내 정보</h1>
+            <span class="mypage-detail">
+                <a href="/huesik/mypageDetail.html">계정설정</a>
+            </span>
+        </div>
+    </header>
+    <nav class="bottom-nav">
+        <ul class="gnb-lists">
+            <li class="gnb-list">
+                <a href="/huesik/index.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-home.png" alt="HOME"></figure>
+                    <small class="gnb-title">HOME</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/about.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-info.png" alt="소개"></figure>
+                    <small class="gnb-title">소개</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/service.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-calendar.png" alt="서비스"></figure>
+                    <small class="gnb-title">서비스</small>
+                </a>
+            </li>
+            <li class="gnb-list">
+                <a href="/huesik/inquiryForm.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-chat.png" alt="문의"></figure>
+                    <small class="gnb-title">문의</small>
+                </a>
+            </li>
+            <li class="gnb-list on">
+                <a href="/huesik/mypage.html">
+                    <figure class="gnb-icon"><img src="/huesik/public/image/icon-user-active.png" alt="내정보"></figure>
+                    <small class="gnb-title">내정보</small>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main id="sub" class="mypage">
+        <div class="inr">
+            <div class="mypage-wrap">
+                <div class="mypage-top">
+                    <div class="mypage-profile">
+                        <figure class="mypage-pic"><img src="/huesik/public/image/mypage-profile.png" alt="마이페이지">
+                        </figure>
+                        <figure class="mypage-camera"><img src="/huesik/public/image/icon-camera.png" alt="카메라 아이콘">
+                        </figure>
+                    </div>
+                    <div class="mypage-content after-arrow">
+                        <a href="/huesik/mypageDetail.html">
+                            <dl>
+                                <dt>홍길동</dt>
+                                <dd>[쉐어하우스] 휴식타워 광운대점 <span class="font-prompt">421</span>호</dd>
+                            </dl>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="bar"></span>
+        <div class="inr">
+            <ul class="mypage-menu-lists">
+                <li class="mypage-menu-list">
+                    <strong>고객센터</strong>
+                    <ul class="mypage-menus">
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-mypage-board.png" alt="게시판 아이콘"></figure>
+                                공지사항
+                            </a>
+                        </li>
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-mypage-event.png" alt="게시판 아이콘"></figure>
+                                이벤트
+                            </a>
+                        </li>
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-mypage-faq.png" alt="faq 아이콘"></figure>
+                                자주 묻는 질문
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mypage-menu-list">
+                    <strong>내역</strong>
+                    <ul class="mypage-menus">
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-mypage-chat.png" alt="채팅 아이콘"></figure>
+                                문의 내역
+                            </a>
+                        </li>
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-mypage-wallet.png" alt="지갑 아이콘"></figure>
+                                계약&결제 내역
+                            </a>
+                        </li>
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-reservation.png" alt="예약 아이콘"></figure>
+                                예약 내역
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="mypage-menu-list">
+                    <strong>약관</strong>
+                    <ul class="mypage-menus">
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-info-black.png" alt="인포 아이콘"></figure>
+                                이용약관
+                            </a>
+                        </li>
+                        <li class="mypage-menu">
+                            <a href="">
+                                <figure><img src="/huesik/public/image/icon-info-black.png" alt="인포 아이콘"></figure>
+                                개인정보 처리방침
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="loading-wrap">
+            <svg class="tea" width="37" height="48" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z"
+                    stroke="var(--secondary)" stroke-width="2"></path>
+                <path
+                    d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34"
+                    stroke="var(--secondary)" stroke-width="2"></path>
+                <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd"
+                    d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+                </path>
+                <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
+                <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="inr">
+            <div class="footer-content">
+                <h1>(주)휴식</h1>
+                <ul class="address-lists">
+                    <li class="address-list">전화번호 : 02.123.1233</li>
+                    <li class="address-list">이메일 : official@huesik.co.kr</li>
+                    <li class="address-list">주소 : 서울특별시 노원구 동일로 174길 27 서울창업디딤터 309호</li>
+                    <li class="address-list">사업자번호 : 646-86-01056</li>
+                </ul>
+                <ul class="sns-lists">
+                    <li class="sns-list">
+                        <a href="">
+                            <figure><img src="/huesik/public/image/icon-blog.png" alt="네이버 블로그"></figure>
+                        </a>
+                    </li>
+                    <li class="sns-list">
+                        <a href="">
+                            <figure><img src="/huesik/public/image/icon-kakao.png" alt="카카오톡"></figure>
+                        </a>
+                    </li>
+                    <li class="sns-list">
+                        <a href="">
+                            <figure><img src="/huesik/public/image/icon-insta.png" alt="인스타"></figure>
+                        </a>
+                    </li>
+                    <li class="sns-list">
+                        <a href="">
+                            <figure><img src="/huesik/public/image/icon-facebook.png" alt="페이스북"></figure>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>

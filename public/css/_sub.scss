@@ -1,7 +1,48 @@
+// SPLASH
+.splash{
+    .inr{
+        display: flex;
+        justify-content: center; 
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+    .splash-wrap{
+        text-align: center;
+        position: relative;
+        h1{
+            margin-top: 10px;
+            color: $color-grey;
+        }
+        img{
+            max-height: 64px;
+        }
+        animation-name: slidein;
+        animation-duration: 1s;
+    }
+}
+@keyframes slidein {
+    from {
+        bottom: -5%;
+        transform: scale(0.8);
+    }
+  
+    to {
+        bottom: 0%;
+        transform: scale(1);
+    }
+  }
+
 // LOGIN
 main{
     &#login{
         padding: 64px 0 100px;
+    }
+    &#main{
+        padding: 0 0 100px;
+    }
+    &#sub{
+        padding: 10px 0 100px;
     }
 }
 .login-txt{
@@ -17,28 +58,7 @@ main{
         font-weight: 500;
     }
 }
-.tab-lists{
-    border-bottom: 1px solid $color-border;
-    display: flex;
-    margin-bottom: 20px;
-    .tab-list {
-        padding: 0 15px 10px 15px;
-        font-size: 16px;
-        color: $color-disable;
-        border-bottom: 1px solid transparent;
-        a{
-            text-decoration: none;
-            color: inherit;
-        }
-        &.on{
-            a{
-                color: $color-primary;
-                font-weight: bold;
-            }
-            border-color: $color-primary;
-        }
-    }
-}
+
 .find-trigger-wrap{
     display: flex;
     justify-content: flex-end;
@@ -135,22 +155,8 @@ main{
 }
 
 // FIND
-header{
-    .inr{
-        display: flex;
-        align-items: center;
-        height: 55px;
-    }
-    .prev{
-        margin-right: 10px;
-        img{
-            width: 24px;
-            height: 24px;
-        }
-      
-    }
-}
-#sub{
+
+.login{
     padding: 30px 0 100px 0;
 }
 .find-account{
@@ -224,4 +230,1348 @@ header{
         text-decoration: underline;
         display: block;
     }
+}
+
+// Accordian
+.accordian {  
+    width: 100%;
+  
+    .accordian-item-header {
+        display: flex;  
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        padding: 18px 0;
+        
+        h4 { 
+            font-weight: 500;
+            font-size: 14px; 
+            line-height: 1.5;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .inquiry-status{
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 500;
+            color: $color-white;
+            display: inline-block;
+            margin-right: 5px;
+            &.complete{
+                background-color: $color-primary;
+            }
+            &.not-complete{
+                background-color: #ccc;
+            }
+        }
+        &::after{
+            right: 0;
+            margin-right: 0;
+            color: $color-grey;
+            transform: translateY(-50%) rotate(45deg);
+            transition: all 0.3s;
+        }
+        &.active{
+            &::after{
+                transform: translateY(0%) rotate(-135deg);
+            }
+        }
+    }
+    .accordian-item-body { 
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        position: relative;
+        background-color: #f7f7f7;
+        font-size: 14px; 
+        line-height: 1.5;
+        .accordian-item-content{
+            border-bottom: 1px solid $color-border;
+            padding: 16px 14px;
+        }
+    }
+}
+
+// MAIN
+.main{
+    padding: 10px 0;
+    .main-slider-wrap{
+        .swiper-slide{
+            width: 100%;
+            height: 240px;
+            background-color: #EDEEF0;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        margin-bottom: 25px;
+    }
+    
+    .acme-news-ticker {
+        border-radius: 10px;
+        border: none !important;
+        margin: 20px 0 40px;
+        .rolling-event-wrap {
+            width: 100%;
+            height: 25px;
+            display: block;
+            overflow: hidden;
+        }
+        
+        .acme-news-ticker-box {
+            padding: 20px 16px 20px 55px !important;
+            height: 60px;
+            border-radius: 5px;
+            overflow: hidden;
+            background: #F7F7F7;
+            padding: 0 16px;
+            position: relative;
+            &::before{
+                content:"";
+                width: 30px;
+                height: 30px;
+                background: url(/huesik/public/image/icon-sound.png) no-repeat center / 30px;
+                display: inline-block;
+                position: absolute;
+                left: 13px; top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    
+        .rolling-event-list {
+            width: 100%;
+            a {
+                font-size: 18px;
+                line-height: 20px;
+                color: #444;
+                flex: 1;
+                width: 95%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block;
+            }
+            b {
+                display: inline-block;
+                font-size: 18px;
+                font-weight: 700;
+                color: #3C6CBB;
+                letter-spacing: 2%;
+                line-height: 20px;
+                margin-right: 5px;
+                text-transform: uppercase;
+            }
+        }
+    
+    }
+    .living-service-wrap{
+        
+        strong{
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            display: block;
+        }
+        .living-service-lists{
+            border-radius: 10px;
+            padding: 25px 14px 25px 20px;
+            box-shadow: $shadow;
+            .living-service-list{
+                position: relative;
+                a{
+                    display: flex;
+                    align-items: center;
+
+                }
+                figure{
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 15px;
+                    background-color: #f7f7f7;
+                    border-radius: 5px;
+                }
+                img{
+                    max-height: 30px;
+                }
+                dl{
+                    dt{
+                        font-size: 18px;
+                        font-weight: 500;
+                        margin-bottom: 2px;
+                    }
+                    dd{
+                        font-size: 14px;
+                    }
+                }
+                &::after{
+                    position: absolute; 
+                    right: 0; top: 50%;
+                    transform: translateY(-50%) rotate(-45deg);
+                }
+                & + .living-service-list{
+                    margin-top: 30px;
+                }
+            }
+        }
+    }
+}
+.contract-summary{
+    padding:30px;
+    box-shadow: $shadow;
+    border-radius: 10px;
+    .contract-address{
+        display: flex;
+        align-items: center;
+        position: relative;
+        .contract-add{
+            font-size: 18px;
+            font-weight: 500;
+            margin-right: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .tooltip-wrap{
+            img{
+                width: 24px;
+                height: 24px;
+            }
+            .tooltip-content{
+                padding: 10px 15px;
+                background-color: #f7f7f7;
+                box-shadow: $shadow;
+                position: absolute;
+                left: 50%!important; top: 100%;
+                transform: translateX(-50%);
+                font-size: 12px;
+                white-space: nowrap;
+                opacity: 0;
+                transition: opacity 0.3s;
+                z-index: 5;
+                border-radius: 5px;
+            }
+            &:hover{
+                .tooltip-content{
+                    opacity: 1;
+                } 
+            }
+        }
+    }
+    .contract-price-wrap{
+        padding: 15px 0 25px 0;
+        position: relative;
+        .price{
+            position: relative;
+            font-size: 16px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            a{
+                display: flex;
+                align-items: center;
+            }
+            span{
+                font-size: 35px;
+                font-weight: 600;
+                display: block;
+            }
+            &::after{
+                margin-left: 15px;
+                padding: 5px;
+                border-width: 0 2px 2px 0;
+            }
+        }
+        
+        .price-detail{
+            font-size: 16px;
+            margin-top: 8px;
+            display: block;
+        }
+        .contact-detail-btn {
+            position: absolute;
+            right: 0; top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .contract-progress-wrap{
+       
+        .progress-detail-wrap{
+            display: flex;
+            margin-top: 10px;
+            p{
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                span{
+                    margin-left: 5px;
+                    display: block;
+                }
+                &.remain-contract{
+                    margin-left: 18px;
+                }
+            }
+           
+        }
+    }
+    &.no-result{
+        background-color:  $color-border;
+        height: 203px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       
+    }
+}
+
+// ABOUT
+.about{
+    .aboutSwiper{
+        .swiper-slide{
+            position: relative;
+        }
+        .about-swiper-content{
+            position: absolute;
+            left: 20px;
+            bottom: 25px;
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: calc(100% - 40px);
+            dl{
+                color: $color-white;
+                dt{
+                    font-size: 22px;
+                    line-height: 30px;
+                    margin-bottom: 5px;
+                    font-weight: 400;
+                }
+                dd{
+                    font-size: 16px;
+                }
+            }
+        }
+        figure{
+            height: 320px;
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            &::after{
+                content:"";
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+                z-index: 1;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            img{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    .about-content-wrap{
+        margin-top: 50px;
+        .about-content-list{
+            dl{
+                padding: 0 15px;
+                margin-bottom: 15px;
+                dt{
+                    font-size: 20px;
+                    color: #81616B;
+                    margin-bottom: 5px;
+                }
+                dd{
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+            img{
+                width: 100%;
+                max-height: 270px;
+                border-radius: 10px;
+                object-fit: cover;
+            }
+            & + .about-content-list{
+                margin-top: 30px;
+            }
+        }
+    }
+}
+
+// NOTICE
+.notice{
+    .notice-list{
+        padding-bottom: 15px;
+        border-bottom: 1px solid $color-border;
+        dl{
+            dt{
+                font-size: 14px;
+                margin-bottom: 5px;
+                font-weight: 400;
+                .new{
+                    color: $color-error;
+                    font-weight: 700;
+                    display: inline-block;
+                    margin-right: 5px;
+                }
+            }
+            dd{
+                font-size: 12px;
+                color: $color-disable;
+                font-family: $font-prompt;
+            }
+        }
+        & + .notice-list{
+            margin-top: 15px;
+        }
+    }
+    .no-result{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .notice-detail-wrap{
+        .notice-detail-tit{
+            dl{
+                padding-bottom: 20px;
+                margin-bottom: 25px;
+                border-bottom: 1px solid $color-border;
+                dt{
+                    font-size: 16px;
+                    font-weight: 500;
+                    margin-bottom: 10px;
+                }
+                dd{
+                    font-size: 14px;
+                    color: $color-disable;
+                    font-family: $font-prompt;
+                }
+            }
+           
+        }
+        .notice-detail-content{
+            font-size: 14px;
+            line-height: 1.5;
+            a{
+                color: $color-primary;
+                text-decoration: underline;
+            }
+            p{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// SERVICE
+.service{
+    padding-bottom: 0!important;
+    .share-area-lists{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .share-area-list{
+        position: relative;
+        height: 240px;
+        display: flex;
+        align-items: flex-end;
+        padding-top: 50px;
+        width: calc(100% / 2 - 5px);
+        margin-bottom: 20px;
+        .share-area-inr{
+            width: 100%;
+            box-shadow: $shadow;
+            border-radius: 10px;
+            padding: 130px 16px 20px 16px;
+            height: 190px;
+            .btn{
+                font-size: 14px;
+                padding: 6px 16px;
+            }
+        }
+
+        figure{
+            position: absolute;
+            left: 50%; top: 0;
+            transform: translateX(-50%);
+            width: calc(100% - 36px);
+            img{
+                max-height: 170px;
+                border-radius: 10px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        dl{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            dt{
+                small{
+                    font-size: 12px;
+                    color: $color-disable;
+                    margin-bottom: 2px;
+                    font-weight: 400;
+                    display: block;
+                }
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+       
+        &:nth-child(even){
+            margin-left: 10px;
+        }
+    }  
+    .tab-lists{
+        margin: 0;
+    }
+    .tab-content{
+        padding: 25px 16px 100px;
+        background-color: #f7f7f7;
+        // height: 100%;
+        min-height: 100vh;
+        .filter-wrap{
+            display: flex;
+            .filter-icon{
+                margin-right: 15px;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .filter-lists{
+                display: flex;
+                margin-bottom: 15px;
+                .filter-list{
+                    padding: 4px 8px;
+                    font-size: 14px;
+                    border: 1px solid $color-disable;
+                    color: $color-disable;
+                    border-radius: 30px;
+                    &:hover,
+                    &.on{
+                        color: $color-black;
+                        border-color: $color-black;
+                        font-weight: 500;
+                    }
+
+                    & + .filter-list{
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+        .reservation-lists{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .reservation-list{
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            padding: 12px 18px;
+            box-shadow: $shadow;
+            border-radius: 5px;
+            background-color: #fff;
+            width: calc(100% / 2 - 5px);
+            margin-bottom: 10px;
+            .reservation-room{
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .reservation-date{
+                span{
+                    display: block;
+                    font-family: $font-prompt;
+                    &.reservation-day{
+                        font-size: 14px;
+                        font-weight: 500;
+                        margin-bottom: 5px;
+                    }
+                    &.reservation-time{
+                        font-size: 12px;
+                        font-weight: 400;
+                        color: $color-disable;
+                        width: 135px;
+                        word-break:break-word;
+                    }
+                }
+            }
+            .reservation-status{
+                .status{
+                    padding: 6px 8px;
+                    border-radius: 3px;
+                    color: $color-white;
+                    font-weight: 500;
+                    background-color: #ccc;
+                    font-size: 12px;
+                    &.complete{
+                        background-color: #357A51;
+                    }
+                    &.ongoing{
+                        background-color: $color-primary;
+                    }
+                    &.not-complete{
+                        background-color: #BB3C3C;
+                    }
+                }
+                .cancel{
+                    font-size: 12px;
+                    color: $color-disable;
+                    text-decoration: underline;
+                    text-align: center;
+                    display: block;
+                    margin-top: 3px;
+                    line-height: 1.5;
+                }
+            }
+            &:nth-child(even){
+                margin-left: 10px;
+            }
+           
+        }
+    } 
+}
+
+
+// BANK HISTORY
+.banking-history-wrap{
+    margin-top: 25px;
+    .banking-history-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        .total-amount{
+            color: $color-primary;
+        }
+    }
+    .banking-history-lists{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .banking-history-list{
+        padding: 20px 16px;
+        box-shadow: $shadow;
+        border-radius: 5px;
+        position: relative;
+        padding-left: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: calc(100% / 2 - 5px);
+        margin-bottom: 10px;
+        figure{
+            position: absolute;
+            left: 16px; top: 50%;
+            transform: translateY(-50%);
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        dl{
+            dt{
+                font-size: 14px;
+                font-weight: 400;
+            }
+            dd{
+                font-size: 12px;
+                color: $color-disable;
+            }
+        }
+        .amount{
+            font-size: 12px;
+            font-weight: 400;
+            .font-prompt{
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+        &:nth-child(even){
+            margin-left: 10px;
+        }
+    }
+}
+
+
+// NOTIFICATION
+.notification-wrap{
+    .notification-list{
+        margin-bottom: 15px;
+        border-bottom: 1px solid $color-border;
+        padding-bottom: 15px;
+        .notification-date{
+            font-size: 16px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .notification-inr-list{
+            display: flex;
+            position: relative;
+            margin-bottom: 20px;
+        }
+        figure{
+            margin-right: 15px;
+            
+            img{
+                width: 46px;
+                height: 46px;
+            }
+        }
+        dl{
+            .notify-title{
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 2px;
+                .new{
+                    font-size: 10px;
+                    color: $color-error;
+                    vertical-align: middle;
+                    font-weight: 600;
+                    font-family: $font-prompt;
+                    margin-left: 5px;
+                    display: inline-block;
+                }
+            }
+            .notify-desc{
+                font-size: 12px;
+            }
+            .notify-date{
+                position: absolute;
+                right: 0;
+                top: 0;
+                font-size: 14px;
+                color: $color-disable;
+                font-family: $font-prompt;
+            }
+        }
+    }
+}
+
+
+// MYPAGE
+.mypage-detail{
+    position: absolute;
+    right: 16px; 
+    top: 50%;
+    transform: translateY(-50%);
+    a{
+        font-size: 14px;
+        text-decoration: underline;
+        color: $color-disable;
+    }
+}
+.mypage{
+    padding-bottom: 0!important;
+    .mypage-top{
+        padding: 10px 0 20px;
+        display: flex;
+        align-items: center;
+        .mypage-profile{
+            position: relative;
+            display: inline-block;
+            margin-right: 15px;
+            .mypage-pic{
+                img{
+                    width: 64px;
+                    height: 64px;
+                }
+            }
+            .mypage-camera{
+                img{
+                    width: 22px;
+                    height: 22px;
+                }
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                box-shadow: $shadow;
+                border-radius: 50%;
+            }
+        }
+        .mypage-content{
+            flex: 1;
+            position: relative;
+            dt{
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            dd{
+                font-size: 16px;
+                color: $color-grey;
+            }
+            &::after{
+                position: absolute; 
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+    .mypage-menu-lists{
+        margin: 25px 0 50px 0;
+
+        .mypage-menu-list{
+            margin-bottom: 30px;
+        }
+        strong{
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-disable;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .mypage-menu{
+            a{
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+            }
+            margin-bottom: 10px;
+        }
+        figure{
+            margin-right: 10px;
+        }
+        img{
+            width: 25px;
+            height: 25px;
+        }
+    }
+    .mypage-detail-list{
+        padding: 0 0 25px;
+        strong{
+            font-size: 14px;
+            color: #444;
+            margin-bottom: 15px;
+            display: block;
+            padding: 0 16px;
+        }
+        .mypage-detail-inr-lists{
+            padding: 0 16px 25px;
+        }
+        .mypage-detail-inr-list{
+            font-size: 14px;
+            margin-bottom: 10px;
+           
+            dl{
+                display: flex;
+                dt{
+                    min-width: 70px;
+                    margin-right: 50px;
+                    color: $color-disable;
+                    font-weight: 400;
+            }
+                dd{
+                    word-break: keep-all;
+                }
+            }
+            
+        }
+        &::after{
+            content:'';
+            width: 100%;
+            height: 6px;
+            background-color: #f7f7f7;
+            display: block;
+        }
+    }
+    .mypage-bottom-btns{
+        li{
+            padding: 15px 16px;
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+// RESERVATION
+.reservation{
+    padding: 0!important;
+    .reservation-place-img{
+        position: relative;
+        img{
+            width: 100%;
+            height: 285px;
+            object-fit: cover;
+        }
+        &::before{
+            content:"";
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            left: 0; top: 0;
+            background: linear-gradient(180deg, rgba(20, 20, 20, 0.8) 5.7%, rgba(0, 0, 0, 0) 94.22%);
+            z-index: 1;
+        }
+
+    }
+    .reservation-process-wrap{
+        position: relative;
+        top: -100px;
+        margin-bottom: -100px;
+        z-index: 10;
+        .reservation-process-lists{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .reservation-process-list{
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: $shadow;
+            margin-bottom: 30px;
+            >div{
+                &:nth-child(2){
+                    padding: 25px;
+                    box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.02);
+                }
+            }
+            .reservation-process-tit{
+                padding: 25px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                h2{
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+                .today{
+                    font-size: 16px;
+                    font-weight: 500;
+                    span{
+                        margin-left: 5px;
+                    }
+                }
+
+            }
+            .reservation-time-wrap{
+                strong{
+                    font-size: 18px;
+                    font-weight: 600;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+                .time-wrap{
+                    &:first-of-type{
+                        padding-bottom: 30px;
+                        margin-bottom: 30px;
+                        border-bottom: 1px solid $color-border;
+                    }
+                }
+                .time-lists{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .time-list{
+                        width: calc(100% / 4);
+                        text-align: center;
+                        padding: 8px 20px;
+                        font-size: 20px;
+                        font-family: $font-prompt;
+                        height: 60px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 4px;
+                        &.on{
+                            background-color: #81616B;
+                            color: $color-white;
+                            font-weight: 600;
+                        }
+                        &.disable{
+                            color: #ccc;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .reservation-note{
+        padding: 25px 0 50px;
+        background-color: #f7f7f7;
+        .inr{
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h2{
+            font-size: 18px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid $color-black;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+
+            figure{
+                margin-right: 5px;
+            }
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
+        .reservation-note-list{
+            margin-bottom: 10px;
+            font-size: 16px;
+            dl{
+                display: flex;
+                dt{
+                    min-width: 100px;
+                    margin-right: 30px;
+                    color: $color-disable;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    .reservation-summary{
+        position: sticky;
+        left: 0;
+        // bottom: 50px; //with bottom nav
+        bottom: 0; //without bottom nav
+        padding: 20px 0 ;
+        width: 100%;
+        background-color: #152135;
+        color: $color-white;
+        z-index: 50;
+        .inr{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            dt{
+                font-size: 20px;
+                font-weight: 500;
+                .reservation-day{
+                    font-size: 20px;
+                    font-family: $font-prompt;
+                    margin-left: 7px;
+                    display: inline-block;
+                    font-weight: 300;
+                }
+                margin-bottom: 5px;
+            }
+            dd{
+                font-size: 16px;
+                font-family: $font-prompt;
+                font-weight: 200;
+                color: $color-disable;
+                letter-spacing: 1px;
+                word-break: break-word;
+            }
+            .btn{
+                background-color: transparent;
+                border-color: $color-white;
+                color: $color-white!important;
+                margin-left: 20px;
+                &.disable{
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    .reservation-detail-wrap{
+        p{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// INQUIRY
+.inquiry{
+    .input-wrap{
+        & + .input-wrap{
+            margin-top: 25px;
+        }
+    }
+    .btn-wrap{
+        margin-top: 40px;
+    }
+}
+
+
+@media(max-width: 700px){
+    .banking-history-wrap {
+        .banking-history-list {
+            padding-left: 16px;
+            figure{
+                display: none;
+            }
+        }
+    }
+}
+@media(max-width: 600px){
+    .main{
+        .main-slider-wrap{
+            .swiper-slide{
+                height: 140px;
+            }
+        }
+        .contract-summary{
+            padding: 18px 20px 30px;
+            .contract-address{
+                .contract-add{
+                    font-size: 14px;
+                }
+            }
+            .tooltip-wrap{
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+            .contract-price-wrap {
+                .price {
+                    font-size: 12px;
+                    span{
+                        font-size: 26px;
+                    }
+                    &::after{
+                        padding: 3px;
+                        border-width: 0 1px 1px 0;
+                    }
+                }
+                .price-detail{
+                    margin-top: 5px;
+                    font-size: 12px;
+                }
+            }
+            .contract-progress-wrap {
+                .progress-detail-wrap {
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+            
+        }
+        .acme-news-ticker {
+            .acme-news-ticker-box{
+                padding: 10px 16px 10px 50px !important;
+                height: 40px;
+                &::before{
+                    width: 24px;
+                    height: 24px;
+                    background-size: 24px;
+                }
+                .rolling-event-list{
+                    a,b{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .living-service-wrap {
+            strong{
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+            .living-service-lists {
+                .living-service-list {
+                    figure{
+                        width: 40px;
+                        height: 40px;
+                        img{
+                            max-height: 20px;
+                        }
+                    }
+                    dl{
+                        dt{
+                            font-size: 14px;
+                        }
+                        dd{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .about {
+        .about-content-wrap {
+            margin-top: 30px;
+            .about-content-list{
+                img{
+                    max-height: 175px;
+                }
+                dl{
+                    dt{
+                        font-size: 16px;
+                    }
+                    dd{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .aboutSwiper {
+            figure{
+                max-height: 225px;
+            }
+            .about-swiper-content {
+                bottom: 20px;
+                dl{
+                    dt{
+                        font-size: 18px;
+                        line-height: 26px;
+                        margin-bottom: 2px;
+                    }
+                    dd{
+                        font-size: 12px;
+                    }
+                }
+                .about-content-list {
+                    dl{
+                        dt{
+                            font-size: 16px;
+                            margin-bottom: 2px;
+                        }
+                        dt{
+                            font-size: 12px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .mypage {
+        .mypage-top {
+            .mypage-content {
+                dl{
+                    width: 90%;
+                }
+                dt{
+                    font-size: 16px;
+                }
+                dd{
+                    font-size: 12px;
+                    word-break: keep-all;
+                }
+            }
+        }
+    }
+    .service {
+        .tab-content {
+            .filter-wrap {
+                .filter-lists {
+                    .filter-list{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .reservation{
+        .reservation-process-wrap {
+            .reservation-process-list {
+                .reservation-process-tit{
+                    padding: 15px 16px;
+                    h2{
+                        font-size: 14px;
+                    }
+                    .today{
+                        font-size: 12px;
+                    }
+                }
+                >div:nth-child(2){
+                    padding: 25px 16px;
+                }
+                .reservation-time-wrap {
+                    strong{
+                        font-size: 14px;
+                        margin-bottom: 15px;
+                    }
+                    .time-lists {
+                        .time-list{
+                            height: 40px;
+                            font-size: 14px;
+                        }
+                    }
+                    .time-wrap{
+                        &:first-of-type{
+                            padding-bottom: 20px;
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+            
+        }
+        .reservation-note {
+            h2{
+                margin-bottom: 15px;
+                padding-bottom: 10px;
+                line-height: 1;
+                img{
+                    width: 22px;
+                    height: 22px;
+                }
+                font-size: 14px;
+            }
+            .reservation-note-list{
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+        }
+        .reservation-summary {
+            .inr {
+                dt{
+                    font-size: 16px;
+                    .reservation-day{
+                        font-size: 16px;
+                    }
+                }
+                dd{
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .pc-flex{
+        display: block!important;
+        li{
+            width: 100%!important;
+            &:nth-child(even){
+                margin-left: 0!important;
+            }
+        }
+    }
+    
+    .banking-history-wrap {
+        .banking-history-list {
+            padding-left: 55px;
+            figure{
+                display: block;
+            }
+        }
+    }
+        
+   
 }

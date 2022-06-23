@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 // font-family: 'Noto Sans KR', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// font-family: 'Prompt', sans-serif;
+$font-notosans: 'Noto Sans KR', sans-serif;
+$font-prompt: 'Prompt', sans-serif;
 
-
-
+html{
+    background-color: #000;
+}
 body{
     max-width: 778px;
     margin: 0 auto!important;
+    min-height: 100vh;
 }
 body, a{
     font-family: 'Noto Sans KR', sans-serif;
@@ -16,6 +22,15 @@ body, a{
 }
 .visible{
     display: block!important;
+}
+.font-prompt{
+    font-family: $font-prompt;
+}
+.font-bold{
+    font-weight: 600!important;
+}
+.color-primary{
+    color: $color-primary;
 }
 
 // BOTTOM NAVIGATION
@@ -61,5 +76,257 @@ nav{
     position: relative;
     &.login{
         padding: 0 38px;
+    }
+}
+
+// HEADER
+header{
+    .inr{
+        display: flex;
+        height: 65px;
+        align-items: center;
+        &.flex{
+            justify-content: space-between;
+        }
+    }
+    .prev{
+        margin-right: 10px;
+        img{
+            width: 24px;
+            height: 24px;
+        }
+      
+    }
+    h1{
+        font-size: 18px;
+    }
+    .edit{
+        a{
+            font-size: 14px;
+            color: $color-primary;
+            font-weight: 700;
+        }
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .logo{
+        img{
+            max-height: 36px;
+        }
+    }
+    .header-right{
+        display: flex;
+       
+        .header-user{
+            display: flex;
+            align-items: center;
+            figure{
+                background-color: #EEEEEE;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+            font-size: 14px;
+        }
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .header-notification{
+            margin-left: 10px;
+            figure{
+                border-radius: 50%;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+            }
+            img{
+                &.active{
+                    display: none;
+                }
+            }
+            &.active{
+                img{
+                    &.active{
+                        display: block;
+                    }
+                    &.default{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &.header-sticky{
+        position: fixed;
+        left: 50%;top: 0;
+        width: 100%;
+        max-width: 776px;
+        transform: translateX(-50%);
+        z-index: 100;
+        background-color: $color-white;
+    }
+    &.header-fixed{
+        position: fixed;
+        left: 50%;top: 0;
+        width: 100%;
+        max-width: 776px;
+        color: $color-white;
+        transform: translateX(-50%);
+        z-index: 100;
+        .prev{
+            img{
+                filter: brightness(100);
+            }
+        }
+        &.header-sticky{
+            background-color: rgba(0,0,0,0.4);
+        }
+    }
+}
+
+// FOOTER
+footer{
+    margin-top: 15px;
+    .footer-content{
+        padding: 20px 0 100px;
+        border-top: 1px solid $color-grey;
+        position: relative;
+    }
+
+    h1{
+        font-size: 20px;
+        color: $color-grey;
+        margin-bottom: 20px;
+    }
+    .address-list{
+        font-size: 14px;
+        color: $color-disable;
+        line-height: 1.3;
+        margin-bottom: 5px;
+    }
+    .sns-lists{
+        display: flex;
+        position: absolute;
+        right: 0; top: 20px;
+        img{
+            width: 30px;
+            height: 30px;
+        }
+        .sns-list{
+            margin-right: 5px;
+        }
+    }
+}
+// STYLE
+main{
+    .after-arrow{
+        &::after{
+            content:"";
+            border: 1px solid $color-black;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 4px;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            margin-left: 15px;
+        }
+    }
+    span.bar{
+        width: 100%;
+        height: 6px;
+        background-color: #f7f7f7;
+        display: block;
+    }
+    .hidden{
+        display: none;
+    }
+    .no-result-txt{
+        font-size: 12px;
+        color: $color-primary;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+    .sub-content-tit{
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 25px;
+        display: block;
+    }
+    .tab-lists{
+        border-bottom: 1px solid $color-border;
+        display: flex;
+        margin-bottom: 20px;
+        .tab-list {
+            // padding: 0 15px 10px 15px;
+            padding: 0 0 10px;
+            font-size: 16px;
+            color: $color-disable;
+            border-bottom: 1px solid transparent;
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            &.on{
+                a{
+                    font-weight: bold;
+                    color: $color-primary;
+                }
+                font-weight: bold;
+                color: $color-primary;
+                border-color: $color-primary;
+            }
+            & + .tab-list{
+                margin-left: 25px;
+            }
+        }
+    }
+    .tab-contents{
+        .tab-content{
+            display: none;
+            &.on{
+                display: block;
+            }
+        }
+    }
+}
+
+@media(max-width: 600px){
+    header{
+        .inr{
+            height: 55px;
+        }
+        h1{
+            font-size: 16px;
+        }
+        .logo{
+            img{
+                max-height: 34px;
+            }
+        }
+        .header-right{
+            img{
+                width: 26px;
+                height: 26px;
+            }
+        }
+    }
+    footer {
+        h1{
+            font-size: 16px;
+        }
+        .address-list{
+            font-size: 12px;
+        }
+        .sns-lists {
+            .sns-list{
+                margin-right: 2px;
+            }
+            img{
+                width: 24px;
+                height: 24px;
+            }
+        }
     }
 }
