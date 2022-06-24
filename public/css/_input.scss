@@ -130,6 +130,7 @@
             text-decoration: underline;
             font-weight: 400;
             box-shadow: none;
+            color: $color-disable!important;
         }
     }
     input[type="checkbox"] {width: 0;height: 0;
