@@ -531,11 +531,15 @@ main{
     &.no-result{
         background-color:  $color-border;
         height: 203px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        .no-result-wrap{
+            display: flex;
+            justify-content: center; align-items: center;
+            height: 100%;
+        }
        
     }
+    
 }
 
 // ABOUT
@@ -1391,6 +1395,7 @@ main{
             }
         }
         .tooltip-wrap{
+            margin-top: 3px;
             img{
                 width: 20px!important;
                 height: 20px!important;
