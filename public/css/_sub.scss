@@ -1200,7 +1200,7 @@ main{
                     display: flex;
                     flex-wrap: wrap;
                     .time-list{
-                        width: calc(100% / 4);
+                        width: calc(100% / 4 - 5px);
                         text-align: center;
                         padding: 8px 20px;
                         font-size: 20px;
@@ -1210,6 +1210,8 @@ main{
                         justify-content: center;
                         align-items: center;
                         border-radius: 4px;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
                         &.on{
                             background-color: #81616B;
                             color: $color-white;

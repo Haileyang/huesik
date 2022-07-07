@@ -36,7 +36,7 @@ Add [jQuery](https://developers.google.com/speed/libraries/devguide#jquery) to y
 
 Then add the plugin (after jQuery)
 ```html
-<script src="/path/to/plugin/jquery.MultiFile.min.js"></script>
+<script src="/huesik/path/to/plugin/jquery.MultiFile.min.js"></script>
 ```
 
 **Note** that, before v2.2.2, the file was called `jQuery.MultiFile.min.js` instead (jQuery recommended to use a lowercase ‘q’ in package names).

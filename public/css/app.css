@@ -2175,7 +2175,7 @@ main#sub {
   flex-wrap: wrap;
 }
 .reservation .reservation-process-wrap .reservation-process-list .reservation-time-wrap .time-lists .time-list {
-  width: 25%;
+  width: calc(25% - 5px);
   text-align: center;
   padding: 8px 20px;
   font-size: 20px;
@@ -2185,6 +2185,8 @@ main#sub {
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 .reservation .reservation-process-wrap .reservation-process-list .reservation-time-wrap .time-lists .time-list.on {
   background-color: #81616B;
