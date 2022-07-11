@@ -464,7 +464,7 @@ main{
                 z-index: 5;
                 border-radius: 5px;
             }
-            &:hover{
+            &.on{
                 .tooltip-content{
                     opacity: 1;
                 } 

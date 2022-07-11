@@ -407,7 +407,6 @@ main .tab-contents .tab-content.on {
     width: 26px;
     height: 26px;
   }
-
   footer h1 {
     font-size: 16px;
   }
@@ -936,7 +935,6 @@ textarea::placeholder {
   progress::-webkit-progress-value {
     height: 26px;
   }
-
   .ui-datepicker .ui-datepicker-header .ui-datepicker-title {
     font-size: 18px;
   }
@@ -1494,7 +1492,7 @@ main#sub {
   z-index: 5;
   border-radius: 5px;
 }
-.contract-summary .contract-address .tooltip-wrap:hover .tooltip-content {
+.contract-summary .contract-address .tooltip-wrap.on .tooltip-content {
   opacity: 1;
 }
 .contract-summary .contract-price-wrap {
@@ -2331,7 +2329,6 @@ main#sub {
   .main .living-service-wrap .living-service-lists .living-service-list dl dd {
     font-size: 12px;
   }
-
   .contract-summary {
     padding: 18px 20px 30px !important;
   }
@@ -2366,7 +2363,6 @@ main#sub {
   .contract-summary .contract-progress-wrap .progress-detail-wrap p {
     font-size: 14px;
   }
-
   .about .about-content-wrap {
     margin-top: 30px;
   }
@@ -2400,7 +2396,6 @@ main#sub {
   .about .aboutSwiper .about-swiper-content .about-content-list dl dt {
     font-size: 12px;
   }
-
   .mypage .mypage-top .mypage-content dl {
     width: 90%;
   }
@@ -2411,11 +2406,9 @@ main#sub {
     font-size: 12px;
     word-break: keep-all;
   }
-
   .service .tab-content .filter-wrap .filter-lists .filter-list {
     font-size: 12px;
   }
-
   .reservation .reservation-process-wrap .reservation-process-list .reservation-process-tit {
     padding: 15px 16px;
   }
@@ -2463,7 +2456,6 @@ main#sub {
   .reservation .reservation-summary .inr dd {
     font-size: 12px;
   }
-
   .pc-flex {
     display: block !important;
   }
@@ -2473,7 +2465,6 @@ main#sub {
   .pc-flex li:nth-child(even) {
     margin-left: 0 !important;
   }
-
   .banking-history-wrap .banking-history-list {
     padding-left: 55px;
   }

@@ -110,3 +110,13 @@ window.addEventListener("load", function(){
     document.querySelector('.loading-wrap').classList.remove('on')
     document.querySelector('body').classList.remove('loading')
 });
+
+// TOOLTIP
+function toolTipOpen(event){
+    const targeted = event.currentTarget
+    const toolTipWrap = targeted.parentNode;
+    toolTipWrap.classList.toggle('on')
+    toolTipWrap.addEventListener('mouseleave', function (){
+        toolTipWrap.classList.remove('on')
+    })
+}
