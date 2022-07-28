@@ -2299,6 +2299,50 @@ main#sub {
   margin-top: 40px;
 }
 
+.error-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.error-404 .wrap-404 figure {
+  text-align: center;
+}
+.error-404 .wrap-404 img {
+  width: 20vw;
+}
+.error-404 .wrap-404 dl {
+  margin-top: 20px;
+  text-align: center;
+}
+.error-404 .wrap-404 dl dt {
+  font-size: 26px;
+  font-weight: 600;
+  color: #092D67;
+  margin-bottom: 15px;
+}
+.error-404 .wrap-404 dl dt strong {
+  font-size: 60px;
+  display: block;
+  color: #092D67;
+  font-family: "Prompt", sans-serif;
+  font-weight: 600;
+  margin-bottom: -10px;
+}
+.error-404 .wrap-404 dl dd {
+  font-size: 16px;
+  color: #888;
+}
+.error-404 .wrap-404 .btn {
+  margin-top: 50px;
+  background-color: #092D67;
+  font-size: 18px;
+  padding: 10px 20px;
+  width: auto;
+}
+
 @media (max-width: 700px) {
   .banking-history-wrap .banking-history-list {
     padding-left: 16px;
